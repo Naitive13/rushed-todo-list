@@ -1,14 +1,15 @@
 import "./TaskInput.css";
 
 type taskInputProps = {
-  inputRef: React.RefObject<HTMLInputElement>;
-  selectRef: React.RefObject<HTMLSelectElement>;
+  task: React.RefObject<HTMLInputElement>;
+  priority: React.RefObject<HTMLSelectElement>;
+  addTask: React.FormEventHandler<HTMLFormElement>;
 };
 function TaskInput(props: taskInputProps) {
   return (
     <>
-      <form id="newTask">
-        <select required id="newTaskPriority" ref={props.selectRef}>
+      <form id="newTask" onSubmit={props.addTask}>
+        <select required id="newTaskPriority" ref={props.priority}>
           <option value="Low" id="low">
             Low
           </option>
@@ -19,7 +20,7 @@ function TaskInput(props: taskInputProps) {
             High
           </option>
         </select>
-        <input type="text" ref={props.inputRef} id="newTaskInput" />
+        <input type="text" ref={props.task} id="newTaskInput" />
         <button id="newTaskButton">Add</button>
       </form>
     </>

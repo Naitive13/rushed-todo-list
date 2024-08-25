@@ -3,6 +3,8 @@ import "./Task.css";
 type taskProps = {
   priority: string;
   task: string;
+  update: React.ChangeEventHandler<HTMLInputElement>;
+  delete: React.MouseEventHandler<HTMLButtonElement>;
 };
 
 export default function Task(props: taskProps) {
@@ -10,8 +12,15 @@ export default function Task(props: taskProps) {
     <>
       <div className="taskContainer">
         <b className={`priority ${props.priority}`}>{props.priority}</b>
-        <input type="text" defaultValue={props.task} className="taskInput" />
-        <button className="delete">Delete</button>
+        <input
+          type="text"
+          className="taskInput"
+          defaultValue={props.task}
+          onChange={props.update}
+        />
+        <button className="delete" onClick={props.delete}>
+          Delete
+        </button>
       </div>
     </>
   );
