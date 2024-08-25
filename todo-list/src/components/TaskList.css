@@ -1,0 +1,7 @@
+#frame {
+  height: 60dvh;
+  border: 1px solid #fff;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+}
