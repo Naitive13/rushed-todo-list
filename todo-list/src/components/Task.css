@@ -1,0 +1,70 @@
+.taskContainer {
+  height: 10%;
+  display: flex;
+  /* border: solid 1px #fff; */
+  justify-content: space-between;
+  padding-inline: 18px;
+  padding-block: 8px;
+  margin-bottom: 10px;
+  gap: 10px;
+  background: #1a1a1a;
+}
+
+.taskInput {
+  width: 75%;
+  height: 35px;
+  background: #fff;
+  color: #000;
+  outline: none;
+  border: 1px #000;
+  border-radius: 4px;
+  padding-inline: 1rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.delete {
+  background: #a00;
+  border: solid 1px #fff;
+  text-align: center;
+  padding: 0 10px;
+  transition: 500ms;
+  font-weight: 700;
+  border-radius: 8px;
+  height: 35px;
+}
+
+.priority {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 4px;
+  width: 75px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.Low {
+  background: #080;
+}
+
+.Medium {
+  color: #000;
+  background: #ff0;
+}
+
+.High {
+  background: #b40;
+}
+
+.delete:hover {
+  transform: scale(1.1);
+  border-color: #fff;
+  background: #f00;
+}
+
+.delete:active {
+  transform: scale(0.8);
+}
