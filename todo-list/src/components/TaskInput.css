@@ -1,0 +1,58 @@
+form {
+  border: solid 1px #fff;
+  display: flex;
+  padding: 0.8rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 60dvw;
+  height: 40px;
+}
+
+#newTaskInput {
+  width: 70%;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding-inline: 14px;
+  color: #eee;
+  background: #121212;
+  border-radius: 8px;
+  transition: 500ms;
+  font-size: 18px;
+}
+
+#newTaskButton {
+  background: #202a8f;
+  border: solid 1px #fff;
+  text-align: center;
+  padding: 0 16px;
+  transition: 500ms;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  height: 40px;
+}
+
+#newTaskPriority {
+  background: #1e2133;
+  height: 40px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-align: center;
+  border: solid 2px #44485a;
+  color: #beceed;
+  border-radius: 8px;
+}
+
+#newTaskInput:focus {
+  border: 1px solid #aaa;
+}
+
+#newTaskButton:hover {
+  color: #202a8f;
+  background: #fff;
+}
+
+#newTaskButton:active {
+  transform: scale(0.8);
+}
